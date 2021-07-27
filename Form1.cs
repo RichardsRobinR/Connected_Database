@@ -78,7 +78,7 @@ namespace Connected_Database
             parameter_3.ParameterName = "branch_p";
             parameter_3.Value = Branch_TextBox.Text;
 
-            SqlCommand sqlCommand = new SqlCommand("UPDATE student Set name = @name_p,branch = @branch_p WHERE rollno = @rollno_p");
+            SqlCommand sqlCommand = new SqlCommand("UPDATE student SET name = @name_p,branch = @branch_p WHERE rollno = @rollno_p");
             sqlCommand.Connection = sqlConnection;
 
 
@@ -95,7 +95,7 @@ namespace Connected_Database
             parameter_1.ParameterName = "rollno_p";
             parameter_1.Value = int.Parse(rollNo_TextBox.Text);
 
-            SqlCommand sqlCommand = new SqlCommand("DELETE FRom student WHERE rollno = @rollno_p");
+            SqlCommand sqlCommand = new SqlCommand("DELETE FROM student WHERE rollno = @rollno_p");
             sqlCommand.Connection = sqlConnection;
 
             sqlCommand.Parameters.Add(parameter_1);
